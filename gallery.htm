@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <title>Photo gallery</title>
+ <meta charset="utf-8">
+ <style>
+ 
+ /* Style the following markup so that the pictures look like the screenshot, and zoom in on hover, as shown.
+ 
+ You might like to use...
+ 
+ floats
+ transitions
+ transformations
+ box-shadow
+ ::before
+ ::after
+ positioning
+ 
+ 
+ 
+ NB images provided are 250px x 250px*/
+ 
+ 
+ img {display: block; border:5px solid #fff;}
+
+ ul {width : 100%; background : #ccc; list-style: none;}
+ li {}
+ li:nth-child(1n+3) {float: left;}
+ li:nth-child(2n+3) {float:left;}
+ li:nth-child(3n+3) {float:right;}
+ li:nth-child(2) {position : relative; top:-250px; left:300px;}
+ li:nth-child(3) {position : relative; top:-500px; margin-right:150px;}
+ li:nth-child(5) {position : relative; top:-500px; left:50px;}
+ li:nth-child(4) {position : relative; top:-500px;}
+ li:nth-child(6) {position : relative; top:-750px; margin-right:150px;}
+
+img:nth-child(1):hover {
+width: 280px;
+cursor: pointer;
+height: 280px;
+border-radius: 100px;
+transition:0.3s;
+}
+ </style>
+</head>
+<body>
+<h1>Style me!</h1>
+<p>Style the list markup (scroll down) to look something like the screenshots below (NB not all "photos" shown)</p>
+
+<h2>Normal state</h2>
+<img src="images/scr1_normal.jpg" alt="" />
+
+<h2>Hover state</h2>
+<img src="images/scr2_hover.jpg" alt="" />
+
+<hr/>
+
+<h1>Gallery</h1>
+<ul>
+	<li><img src="images/one.jpg" alt="" /></li>
+	<li><img src="images/two.jpg" alt="" /></li>
+	<li><img src="images/three.jpg" alt="" /></li>
+	<li><img src="images/four.jpg" alt="" /></li>
+	<li><img src="images/five.jpg" alt="" /></li>
+	<li><img src="images/six.jpg" alt="" /></li>
+</ul>
+
+
+</body>
+</html> 
