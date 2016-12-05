@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>dd menu</title>
+<style>
+
+nav {
+	width: 500px;
+	background: khaki;
+}
+
+nav ul {
+    padding-left: 0px;
+}
+
+nav ul li {
+   display : inline-block;
+   padding : 10px 35px;
+ }
+
+ nav ul li a{
+    text-decoration : none;
+	color : #000;
+	font-weight : 30px;
+}
+
+ nav ul li ul { 
+	display : none;
+ }
+
+ nav ul li:hover {
+    background : green;
+}
+
+a { 
+   display : block;
+   width : 50px;
+   height : 20px;
+  }
+
+a:hover +ul {
+  display : block;
+  width : 100px;
+  margin-left : -34px;
+  padding-left : 20px;
+  position : absolute;
+  background : khaki;
+ }
+ 
+ nav ul li ul li {
+     padding-left : 0px;
+}
+
+
+
+/* nav ul li ul li a{ 
+	text-align : center;
+	color : white;
+ }*/
+
+
+ 
+   
+</style>
+</head>
+<body>
+
+<h1>Dropdown menu</h1>
+
+<p>1) Look at the screenshot of a menu below and style the markup to look/behave similarly. (The amateurish black arrow is meant to be the  cursor). NB: </p>
+<ul>
+<li> the sub-menus are lighter coloured than the main one, but needn't be different colours (it's only coinincidence that the "Greens" dd-menu is green)<br/>
+<li> the rollover background colour should stand out and have adequate contrast with the text colour.<br/>
+<li> the last list items in the nested menus should have curved bottom edges</li>
+</ul>
+
+<p>Hint: it is better for accessibility that you don't use display:hidden to not show the nested menus, rather, use positioning instead to put it off-screen.</p>
+
+<p>2) Can you code the nested menu to fade in quickly, rather than appear instantly ?</p>
+
+<p>3) Can you code a "you are here" effect for the main menu? You're allowed to add markup for this if you like.</p>
+
+<hr />
+
+<h2>Menu showing rollover state of (inner) list item</h2>
+<img src="img/scr_nested_dd_menu.gif" alt="" />
+
+
+<hr />
+
+<h2>Style me</h2>
+
+<nav>
+ <ul "upper_tops">
+ <li class="tops"><a href="#home">Home</a></li>
+ <li class="tops"><a href="#reds">Reds</a>
+	<ul>
+		<li><a href="#">Scarlet</a></li>
+		<li><a href="#">Ruby</a></li>
+		<li><a href="#">Cherry</a></li>
+	</ul>
+ </li>
+ <li class="tops"><a href="#blues">Blues</a>
+	 <ul class="clearfix">
+		<li><a href="#">Cyan</a></li>
+		<li><a href="#">Navy</a></li>
+		<li><a href="#">Prussian </a></li>
+ 	 </ul>
+ </li>
+ <li class="tops"><a href="#greens">Greens</a>
+	 <ul>
+		<li><a href="#">Mint</a></li>
+		<li><a href="#">Chartreuse</a></li>
+		<li><a href="#">Forest</a></li>
+	 </ul>
+ </li>
+ </ul>
+</nav>
+
+
+
+</body>
+</html>
