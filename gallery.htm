@@ -22,25 +22,42 @@
  NB images provided are 250px x 250px*/
  
  
- img {display: block; border:5px solid #fff;}
+ img {display:block; border:5px solid #fff;}
 
  ul {width : 100%; background : #ccc; list-style: none;}
- li {}
- li:nth-child(1n+3) {float: left;}
- li:nth-child(2n+3) {float:left;}
- li:nth-child(3n+3) {float:right;}
- li:nth-child(2) {position : relative; top:-250px; left:300px;}
- li:nth-child(3) {position : relative; top:-500px; margin-right:150px;}
- li:nth-child(5) {position : relative; top:-500px; left:50px;}
- li:nth-child(4) {position : relative; top:-500px;}
- li:nth-child(6) {position : relative; top:-750px; margin-right:150px;}
+ li {position:relative; margin:80px 10px;}
+ li:nth-child(1n+1) {float: left;} 
+ li:nth-child(3n+1) {float:left;}
+ li:nth-child(5n+1) {float:left;}
+ li::after {
+ 	content : " ";
+ 	display: block;
+ 	width : 250px;
+ 	height: 250px;
+ 	position : absolute;
+ 	z-index: -1;
+ 	top :10px;
+ 	left : 10px;
+ 	transform : rotate(-5deg);
+ 	box-shadow :5px 5px 5px #888888;
+
+ }
+li::before {
+	content : "";
+	display: block;
+	width :250px;
+	height : 250px;
+	position : absolute;
+	z-index : -2;
+	top : 10px;
+	left : 10px;
+	transform : rotate(5deg);
+	box-shadow: 5px 5px 5px #888888;
+}
 
 img:nth-child(1):hover {
-width: 280px;
 cursor: pointer;
 height: 280px;
-border-radius: 100px;
-transition:0.3s;
 }
  </style>
 </head>
